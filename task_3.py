@@ -1,6 +1,6 @@
 import csv
 
-with open('products.csv', 'r', encoding='utf-8') as file:
+with open('products.csv', 'r', encoding='utf-8-sig') as file:
     data = list(csv.DictReader(file, delimiter=';'))
 
     category = input()
@@ -9,7 +9,6 @@ with open('products.csv', 'r', encoding='utf-8') as file:
         
         for product in data:
             if product['Category'] == category:
-                print(member_product)
                 min_count = 1000
                 for count in data:
                     if float(count['Count']) > min_count: 
@@ -22,7 +21,6 @@ with open('products.csv', 'r', encoding='utf-8') as file:
         category = input()
                     
                     
-                
                 
 
 
